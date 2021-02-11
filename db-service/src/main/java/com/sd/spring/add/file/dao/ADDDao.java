@@ -14,9 +14,7 @@ public class ADDDao {
 	EmployeeRepository employeeRepository;
 	
 	public void saveTransaction(List<ADDEmployee> addEmployees) {
-		addEmployees.forEach(emp->{
-			employeeRepository.save(emp);
-		});
+			employeeRepository.saveAll(addEmployees);
 	}
 
 }
